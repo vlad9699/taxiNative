@@ -6,6 +6,7 @@ import {GooglePlacesAutocomplete} from 'react-native-google-places-autocomplete'
 import {useDispatch} from 'react-redux';
 import {setDestination, setOrigin} from '../redux/slices/navSlice';
 import NavFavourites from '../components/NavFavourites';
+import {GOOGLE_KEY} from "../constants/constants";
 
 const HomeScreen = () => {
   const dispatch = useDispatch();
@@ -51,7 +52,7 @@ const HomeScreen = () => {
           minLength={2}
           enablePoweredByContainer={false}
           query={{
-            key: 'AIzaSyA76nCHiu0X6IbC-CFpz2TI9vDXr5dOdMM',
+            key: GOOGLE_KEY,
             language: 'en',
           }}
         />
